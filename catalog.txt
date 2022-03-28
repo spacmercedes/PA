@@ -1,0 +1,1 @@
+{"Name":null,"List":[],"Path":"C:\\Users\\spacm\\IdeaProjects\\Laborator5Homework\\src\\main\\java\\catalog.txt"}
