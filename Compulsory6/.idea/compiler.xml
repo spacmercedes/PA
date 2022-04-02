@@ -9,8 +9,5 @@
         <module name="Compulsory6" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Compulsory6" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
