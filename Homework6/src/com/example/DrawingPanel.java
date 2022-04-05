@@ -51,7 +51,9 @@ public class DrawingPanel extends JPanel
         this.boardHeight = (rowsNr - 1) * cellHeight;
         setPreferredSize(new Dimension(canvasWidth, canvasHeight));
         createOffscreenImage();
+        //frame.gameLogic.init(nrOfRows,nrOfColumns);
         initCircles();
+        repaint();
 
 //drawSticks();
 //        repaint();
@@ -75,18 +77,18 @@ public class DrawingPanel extends JPanel
     }
 
     final void initCircles() {
-     final boolean[] ok = {true};
+     int[] ok = {0};
         for(int row=0;row< this.nrOfRows; row++){
             for(int column = 0; column< this.nrOfColumns;column ++){
 
-                if(ok[0]== true){
+                if(ok[0]== 0){
         this.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
-                drawBlueStone(e.getX(), e.getY());
+                drawRedStone(e.getX(), e.getY());
                 repaint();
 
-                ok [0] = false;
+                ok [0] = 1;
 //                drawRedStone(e.getX(), e.getY());
 //                repaint();
             }
@@ -94,15 +96,15 @@ public class DrawingPanel extends JPanel
         });
 
     }
-            else if(ok[0]==false) {
+            else if(ok[0]==1) {
 
                     this.addMouseListener(new MouseAdapter() {
                         @Override
                         public void mousePressed(MouseEvent e) {
-                            drawBlueStone(e.getX(), e.getY());
+                            drawRedStone(e.getX(), e.getY());
                             repaint();
 
-                            ok[0] = true;
+                            ok[0] = 1;
 
                         }
                     });
@@ -186,15 +188,6 @@ public class DrawingPanel extends JPanel
         }
     }
 
-    private void drawBlueStone(int x,int y){
-
-        super.paintComponent(offscreen);
-        Graphics2D g2 = offscreen;
-        g2.setColor(Color.blue);
-        g2.drawOval(x,y,20,20);
-        g2.fillOval(x,y,20,20);
-    }
-
     private void drawRedStone(int x,int y){
 
         super.paintComponent(offscreen);
@@ -203,6 +196,7 @@ public class DrawingPanel extends JPanel
         g2.drawOval(x,y,20,20);
         g2.fillOval(x,y,20,20);
     }
+
 
 
     void loadImage(BufferedImage image) {

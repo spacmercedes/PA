@@ -4,13 +4,14 @@ import java.util.Random;
 public class GameLogic
 {
     private final MainFrame frame;
-    private int nrOfRows;
-    private int nrOfColumns;
-    private int[][] stickArray;
-    private int[][] stoneArray;
     private int player;
     private int lastMoveRow;
     private int lastMoveColumn;
+    private int nrOfRows;
+    private int nrOfColumns;
+    private int[][] stickArray;
+
+
 
     public GameLogic(MainFrame frame)
     {
@@ -23,7 +24,6 @@ public class GameLogic
         this.nrOfRows = rowsNr;
         this.nrOfColumns= columnsNr;
         stickArray = new int[rowsNr][columnsNr];
-        stoneArray = new int[rowsNr][columnsNr];
         player = 1;
         lastMoveRow = -1;
         lastMoveColumn = -1;
@@ -80,37 +80,23 @@ public class GameLogic
         return stickArray;
     }
 
-    private boolean checkMove(int row, int column)
-    {if (stoneArray[row][column] == 0) {
-            if (stickArray[row][column] == 1) {
-                if (lastMoveRow == -1) {
-                    return true;
-                } else {
-                    return (row + 1 == lastMoveRow && column == lastMoveColumn) ||
-                            (row - 1 == lastMoveRow && column == lastMoveColumn) ||
-                            (row == lastMoveRow && column + 1 == lastMoveColumn) ||
-                            (row == lastMoveRow && column - 1 == lastMoveColumn);
-                }
-            }
-        }
-        return false;
-    }
 
-    protected int setStone(int row, int column)
-    {if (checkMove(row, column))
-        {
-            stoneArray[row][column] = player;
-            lastMoveRow = row;
-            lastMoveColumn = column;
-            if (player == 1) {
-                player = 2;
-                return 1;
-            } else {
-                player = 1;
-                return 2;
-            }
-        } else {
-            return 0;
-        }
-    }
+//
+//    protected int setStone(int row, int column)
+//    {if (checkMove(row, column))
+//        {
+//            stoneArray[row][column] = player;
+//            lastMoveRow = row;
+//            lastMoveColumn = column;
+//            if (player == 1) {
+//                player = 2;
+//                return 1;
+//            } else {
+//                player = 1;
+//                return 2;
+//            }
+//        } else {
+//            return 0;
+//        }
+//    }
 }

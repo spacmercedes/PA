@@ -68,7 +68,9 @@ public class ConfigPanel extends JPanel {
         PrintStream printStream = System.out;
         String var = this.spinner1.getValue().toString();
         printStream.println("Updated canvas size " + var + " by " + this.spinner2.getValue().toString());
+        this.frame.gameLogic.init(this.getNrOfRows(), this.getNrOfColumns());
         this.frame.drawingPanel.init(this.getNrOfRows(), this.getNrOfColumns());
+
     }
 
     public int getNrOfRows() {

@@ -30,6 +30,7 @@ public class MainFrame extends JFrame
         configPanel = new ConfigPanel(this);
         controlPanel = new ControlPanel(this);
         drawingPanel = new DrawingPanel(this);
+        gameLogic = new GameLogic(this);
     }
 
     private void addPanels()
