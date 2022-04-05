@@ -52,7 +52,18 @@ public class DrawingPanel extends JPanel
         setPreferredSize(new Dimension(canvasWidth, canvasHeight));
         createOffscreenImage();
         initCircles();
-        repaint();
+
+//drawSticks();
+//        repaint();
+//        this.addMouseListener(new MouseAdapter()
+//        {
+//            @Override
+//            public void mousePressed(MouseEvent e)
+//            {
+//                drawBlueStone(e.getX(), e.getY());
+//                repaint();
+//            }
+//        });
     }
 
     private void createOffscreenImage()
@@ -64,22 +75,74 @@ public class DrawingPanel extends JPanel
     }
 
     final void initCircles() {
+     final boolean[] ok = {true};
         for(int row=0;row< this.nrOfRows; row++){
             for(int column = 0; column< this.nrOfColumns;column ++){
 
+                if(ok[0]== true){
         this.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
                 drawBlueStone(e.getX(), e.getY());
                 repaint();
 
-                drawRedStone(e.getX(), e.getY());
-                repaint();
+                ok [0] = false;
+//                drawRedStone(e.getX(), e.getY());
+//                repaint();
+            }
 
-        }
         });
-    }}}
 
+    }
+            else if(ok[0]==false) {
+
+                    this.addMouseListener(new MouseAdapter() {
+                        @Override
+                        public void mousePressed(MouseEvent e) {
+                            drawBlueStone(e.getX(), e.getY());
+                            repaint();
+
+                            ok[0] = true;
+
+                        }
+                    });
+                }}}}
+
+
+    private void drawSticks()
+    {
+        final int[][] stickArray = frame.gameLogic.getStickArray();
+        offscreen.setColor(Color.BLACK);
+        for (int row = 0; row < nrOfRows; row++)
+        {
+            for (int column = 0; column < nrOfColumns - 1; column++)
+            {
+                if ((stickArray[row][column] == 1) && (stickArray[row][column + 1] == 1))
+                {
+                    int x1 = centerX + column * cellWidth;
+                    int y1 = centerY + row * cellHeight;
+                    int x2 = x1 + cellWidth;
+                    int y2 = y1;
+                    offscreen.fillRect(x1, y1 - 2, x2 - x1, 5);
+                }
+            }
+        }
+
+        for (int column = 0; column < nrOfColumns; column++)
+        {
+            for (int row = 0; row < nrOfRows - 1; row++)
+            {
+                if ((stickArray[row][column] == 1) && (stickArray[row + 1][column] == 1))
+                {
+                    int x1 = centerX + column * cellWidth;
+                    int y1 = centerY + row * cellHeight;
+                    int x2 = x1;
+                    int y2 = y1 + cellHeight;
+                    offscreen.fillRect(x1 - 2, y1, 5, y2 - y1);
+                }
+            }
+        }
+    }
 
 
     @Override
@@ -125,10 +188,6 @@ public class DrawingPanel extends JPanel
 
     private void drawBlueStone(int x,int y){
 
-//            int x = centerX + column * cellWidth;
-//            int y = centerY + row * cellHeight;
-
-
         super.paintComponent(offscreen);
         Graphics2D g2 = offscreen;
         g2.setColor(Color.blue);
@@ -137,10 +196,6 @@ public class DrawingPanel extends JPanel
     }
 
     private void drawRedStone(int x,int y){
-
-//            int x = centerX + column * cellWidth;
-//            int y = centerY + row * cellHeight;
-
 
         super.paintComponent(offscreen);
         Graphics2D g2 = offscreen;

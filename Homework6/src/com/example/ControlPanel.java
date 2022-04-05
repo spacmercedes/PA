@@ -1,10 +1,8 @@
 package com.example;
 
 
-import javax.imageio.ImageIO;
+
 import javax.swing.*;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.filechooser.FileSystemView;
 import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;

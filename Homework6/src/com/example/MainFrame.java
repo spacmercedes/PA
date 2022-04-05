@@ -6,6 +6,7 @@ import java.awt.*;
 
 public class MainFrame extends JFrame
 {
+    public GameLogic gameLogic;
     protected ConfigPanel configPanel;
     protected ControlPanel controlPanel;
     protected DrawingPanel drawingPanel;
