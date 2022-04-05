@@ -78,4 +78,7 @@ public class ConfigPanel extends JPanel {
     public int getNrOfColumns() {
         return (Integer)this.spinner2.getValue();
     }
+
+
+
 }

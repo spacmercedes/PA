@@ -1,9 +1,17 @@
 package com.example;
 
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.filechooser.FileSystemView;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class DrawingPanel extends JPanel
 {
@@ -43,6 +51,7 @@ public class DrawingPanel extends JPanel
         this.boardHeight = (rowsNr - 1) * cellHeight;
         setPreferredSize(new Dimension(canvasWidth, canvasHeight));
         createOffscreenImage();
+        initCircles();
         repaint();
     }
 
@@ -53,6 +62,25 @@ public class DrawingPanel extends JPanel
         offscreen.setColor(Color.WHITE);
         offscreen.fillRect(0, 0, canvasWidth, canvasHeight);
     }
+
+    final void initCircles() {
+        for(int row=0;row< this.nrOfRows; row++){
+            for(int column = 0; column< this.nrOfColumns;column ++){
+
+        this.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                drawBlueStone(e.getX(), e.getY());
+                repaint();
+
+                drawRedStone(e.getX(), e.getY());
+                repaint();
+
+        }
+        });
+    }}}
+
+
 
     @Override
     protected void paintComponent(Graphics graphics)
@@ -94,4 +122,73 @@ public class DrawingPanel extends JPanel
             }
         }
     }
-}
+
+    private void drawBlueStone(int x,int y){
+
+//            int x = centerX + column * cellWidth;
+//            int y = centerY + row * cellHeight;
+
+
+        super.paintComponent(offscreen);
+        Graphics2D g2 = offscreen;
+        g2.setColor(Color.blue);
+        g2.drawOval(x,y,20,20);
+        g2.fillOval(x,y,20,20);
+    }
+
+    private void drawRedStone(int x,int y){
+
+//            int x = centerX + column * cellWidth;
+//            int y = centerY + row * cellHeight;
+
+
+        super.paintComponent(offscreen);
+        Graphics2D g2 = offscreen;
+        g2.setColor(Color.red);
+        g2.drawOval(x,y,20,20);
+        g2.fillOval(x,y,20,20);
+    }
+
+
+    void loadImage(BufferedImage image) {
+        this.image = image;
+        Graphics2D offscreen = image.createGraphics();
+        repaint();
+    }
+
+  public void saveGame(ActionEvent event) {
+        try {
+            JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+            fileChooser.setDialogTitle("Choose a directory to save your file");
+            fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+
+            int returnValue = fileChooser.showSaveDialog(null);
+            if (returnValue == JFileChooser.APPROVE_OPTION) {
+                ImageIO.write(frame.drawingPanel.image, "PNG",
+                        new File(fileChooser.getSelectedFile() + "\\test.png"));
+            }
+        } catch (IOException exception) {
+            System.out.println(exception.getMessage());
+        }
+    }
+
+
+  public  void loadGame(ActionEvent event) {
+        BufferedImage image = null;
+        try {
+            JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+            fileChooser.setDialogTitle("Select an image");
+            fileChooser.setAcceptAllFileFilterUsed(false);
+            FileNameExtensionFilter filter = new FileNameExtensionFilter("PNG images", "png");
+            fileChooser.addChoosableFileFilter(filter);
+
+            int returnValue = fileChooser.showOpenDialog(null);
+            if (returnValue == JFileChooser.APPROVE_OPTION) {
+                image = ImageIO.read(new File(fileChooser.getSelectedFile().getPath()));
+                frame.drawingPanel.loadImage(image);
+            }
+        } catch (IOException exception) {
+            System.out.println(exception.getMessage());
+        }
+
+}}
