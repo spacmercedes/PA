@@ -55,7 +55,8 @@ public class GameLogic
             } else
             {
                 if (rand.nextInt(2) == 0)
-                {nextColumnPoint -= 1;
+                {
+                    nextColumnPoint -= 1;
                 } else
                 {nextColumnPoint += 1;
                 }
