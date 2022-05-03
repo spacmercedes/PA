@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Database {
     private static final String URL = "jdbc:sqlite:WorldCities.sqlite";
-    private static final String USER = "user";
+    private static final String USER = "victoria";
     private static final String PASSWORD = "password";
     private static Connection connection = null;
     private List<String> savepoints = new ArrayList<>();
