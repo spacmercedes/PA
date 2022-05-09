@@ -27,6 +27,9 @@ public class Country {
 
     @OneToMany(targetEntity = City.class)
     private List cities;
+//
+//    @ManyToOne(targetEntity = Continent.class)
+//    private String continent1;
 
     public List getCities() {
         return cities;

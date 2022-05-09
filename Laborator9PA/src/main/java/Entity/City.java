@@ -31,6 +31,9 @@ public class City {
 
     @Column(name = "LONGITUDE")
     private Double longitude;
+//
+//    @ManyToOne(targetEntity = Country.class)
+//    private String country1;
 
     public City(String name){
         this.name=name;

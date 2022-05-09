@@ -14,8 +14,8 @@ public class CityRepositoryJPA implements AbstractRepository<City>  {
     public CityRepositoryJPA() {
     }
 
-    public static String getFakeName() {
-        String Name = faker.gameOfThrones().city();
+    public static String getFakeName() { //retur un nume fake
+        String Name = faker.harryPotter().location();
         return Name;
     }
 
@@ -49,10 +49,10 @@ public class CityRepositoryJPA implements AbstractRepository<City>  {
         return cityList;
     }
 
-    public void createFakeCities(){
+    public void createFakeCities(){ //folosesc faker pentru a crea 50 de orase fake
         int count = 0;
 
-        while(count<100)
+        while(count<50)
         {
             City city = new City(getFakeName());
 

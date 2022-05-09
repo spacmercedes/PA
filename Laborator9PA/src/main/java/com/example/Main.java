@@ -20,8 +20,8 @@ public class Main {
         emf.close();
 
         CityRepositoryJPA city = new CityRepositoryJPA();
-//        city.createFakeCities();
-        System.out.println(city.findByName("Norvos"));
+      city.createFakeCities();
+        System.out.println(city.findByName("Hogwarts"));
     }
 }
 
