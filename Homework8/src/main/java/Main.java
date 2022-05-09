@@ -17,6 +17,14 @@ public class Main {
 
             System.out.println("Countries from " + continents.findById(europeId) + ": " + countries.findCountryFromContinent(europeId));
 
+//            var cities = new CityDAO();
+//            cities.createFromCSVFile();
+//
+//            System.out.println("Distance between " + cities.findById(cities.findByName("city:" +    )));
+//
+
+//            new MainFrame().setVisible(true);
+
             Database.closeConnection();
 
         } catch (SQLException e) {
