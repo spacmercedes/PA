@@ -45,9 +45,9 @@
     <schema id="14" parent="1" name="PUBLIC">
       <CreatedTimestamp>2014-05-29.16:10:42</CreatedTimestamp>
       <DbLinksHash>195551847</DbLinksHash>
-      <IntrospectionL1Timestamp>2022-05-10.00:22:44</IntrospectionL1Timestamp>
-      <IntrospectionL2Timestamp>2022-05-10.00:22:44</IntrospectionL2Timestamp>
-      <IntrospectionL3Timestamp>2022-05-10.00:22:44</IntrospectionL3Timestamp>
+      <IntrospectionL1Timestamp>2022-05-10.17:08:20</IntrospectionL1Timestamp>
+      <IntrospectionL2Timestamp>2022-05-10.17:08:20</IntrospectionL2Timestamp>
+      <IntrospectionL3Timestamp>2022-05-10.17:08:20</IntrospectionL3Timestamp>
       <IntrospectionVersion>200820</IntrospectionVersion>
       <ModifiedTimestamp>2014-05-29.16:31:03</ModifiedTimestamp>
       <ObjectId>1</ObjectId>
@@ -55,11 +55,11 @@
     <schema id="15" parent="1" name="STUDENT">
       <CreatedTimestamp>2022-02-23.11:10:15</CreatedTimestamp>
       <Current>1</Current>
-      <IntrospectionL1Timestamp>2022-05-10.00:22:44</IntrospectionL1Timestamp>
-      <IntrospectionL2Timestamp>2022-05-10.00:22:44</IntrospectionL2Timestamp>
-      <IntrospectionL3Timestamp>2022-05-10.00:22:44</IntrospectionL3Timestamp>
+      <IntrospectionL1Timestamp>2022-05-10.17:08:20</IntrospectionL1Timestamp>
+      <IntrospectionL2Timestamp>2022-05-10.17:08:20</IntrospectionL2Timestamp>
+      <IntrospectionL3Timestamp>2022-05-10.17:08:20</IntrospectionL3Timestamp>
       <IntrospectionVersion>200820</IntrospectionVersion>
-      <ModifiedTimestamp>2022-05-10.00:22:43</ModifiedTimestamp>
+      <ModifiedTimestamp>2022-05-10.17:08:20</ModifiedTimestamp>
       <ObjectId>48</ObjectId>
     </schema>
     <schema id="16" parent="1" name="SYS">
@@ -31980,7 +31980,16 @@
       <DetailsLevel>3</DetailsLevel>
       <SourceTextLength>355</SourceTextLength>
     </object-type>
-    <routine id="4019" parent="15" name="AFISEAZA_CARNET">
+    <routine id="4019" parent="15" name="AFISEAZASTUDENTI">
+      <CreatedTimestamp>2022-05-10.04:04:29</CreatedTimestamp>
+      <DependsOnIds>-9223372036854775808,4969,4973</DependsOnIds>
+      <DetailsLevel>3</DetailsLevel>
+      <ModifiedTimestamp>2022-05-10.04:04:29</ModifiedTimestamp>
+      <ObjectId>26875</ObjectId>
+      <RoutineKind>procedure</RoutineKind>
+      <SourceTextLength>1212</SourceTextLength>
+    </routine>
+    <routine id="4020" parent="15" name="AFISEAZA_CARNET">
       <CreatedTimestamp>2022-05-08.21:35:15</CreatedTimestamp>
       <DependsOnIds>-9223372036854775808,4969,4973</DependsOnIds>
       <DetailsLevel>3</DetailsLevel>
@@ -31989,7 +31998,7 @@
       <RoutineKind>procedure</RoutineKind>
       <SourceTextLength>2019</SourceTextLength>
     </routine>
-    <routine id="4020" parent="15" name="AFISEAZA_PROFESORI">
+    <routine id="4021" parent="15" name="AFISEAZA_PROFESORI">
       <CreatedTimestamp>2022-05-08.16:47:22</CreatedTimestamp>
       <DependsOnIds>-9223372036854775808,4969,4973</DependsOnIds>
       <DetailsLevel>3</DetailsLevel>
@@ -31998,7 +32007,7 @@
       <RoutineKind>procedure</RoutineKind>
       <SourceTextLength>1016</SourceTextLength>
     </routine>
-    <routine id="4021" parent="15" name="CLONARE">
+    <routine id="4022" parent="15" name="CLONARE">
       <CreatedTimestamp>2022-05-08.16:59:05</CreatedTimestamp>
       <DependsOnIds>-9223372036854775808</DependsOnIds>
       <DetailsLevel>3</DetailsLevel>
@@ -32007,7 +32016,7 @@
       <RoutineKind>procedure</RoutineKind>
       <SourceTextLength>175</SourceTextLength>
     </routine>
-    <routine id="4022" parent="15" name="CLONE_TABLE">
+    <routine id="4023" parent="15" name="CLONE_TABLE">
       <CreatedTimestamp>2022-05-08.16:59:06</CreatedTimestamp>
       <DependsOnIds>-9223372036854775808,4969</DependsOnIds>
       <DetailsLevel>3</DetailsLevel>
@@ -32016,7 +32025,7 @@
       <RoutineKind>procedure</RoutineKind>
       <SourceTextLength>410</SourceTextLength>
     </routine>
-    <routine id="4023" parent="15" name="DEMO">
+    <routine id="4024" parent="15" name="DEMO">
       <CreatedTimestamp>2022-05-09.01:24:53</CreatedTimestamp>
       <DependsOnIds>-9223372036854775808,4969</DependsOnIds>
       <DetailsLevel>3</DetailsLevel>
@@ -32025,7 +32034,7 @@
       <RoutineKind>procedure</RoutineKind>
       <SourceTextLength>478</SourceTextLength>
     </routine>
-    <routine id="4024" parent="15" name="GETTYPE">
+    <routine id="4025" parent="15" name="GETTYPE">
       <CreatedTimestamp>2022-05-08.18:11:51</CreatedTimestamp>
       <DependsOnIds>4969</DependsOnIds>
       <DetailsLevel>3</DetailsLevel>
@@ -32034,99 +32043,106 @@
       <RoutineKind>function</RoutineKind>
       <SourceTextLength>1782</SourceTextLength>
     </routine>
-    <routine id="4025" parent="15" name="GET_COUNT">
+    <routine id="4026" parent="15" name="GET_COUNT">
       <CreatedTimestamp>2022-05-08.21:29:07</CreatedTimestamp>
       <DependsOnIds>-9223372036854775808</DependsOnIds>
       <DetailsLevel>3</DetailsLevel>
-      <ModifiedTimestamp>2022-05-08.21:29:07</ModifiedTimestamp>
+      <ModifiedTimestamp>2022-05-10.05:06:18</ModifiedTimestamp>
       <ObjectId>26772</ObjectId>
       <RoutineKind>function</RoutineKind>
-      <SourceTextLength>236</SourceTextLength>
+      <SourceTextLength>237</SourceTextLength>
     </routine>
-    <routine id="4026" parent="15" name="CALCULEAZA_MEDIA">
+    <routine id="4027" parent="15" name="CALCULEAZA_MEDIA">
       <DetailsLevel>3</DetailsLevel>
       <SourceTextLength>1786</SourceTextLength>
     </routine>
-    <routine id="4027" parent="15" name="RETURNEAZAMEDIA">
+    <routine id="4028" parent="15" name="RETURNEAZAMEDIA">
       <DetailsLevel>3</DetailsLevel>
       <SourceTextLength>1152</SourceTextLength>
     </routine>
-    <routine id="4028" parent="15" name="REURNEAZAMEDIA">
+    <routine id="4029" parent="15" name="REURNEAZAMEDIA">
       <DetailsLevel>3</DetailsLevel>
       <SourceTextLength>1756</SourceTextLength>
     </routine>
-    <routine id="4029" parent="15" name="MODIFICA_BURSA">
+    <routine id="4030" parent="15" name="MODIFICA_BURSA">
       <DetailsLevel>3</DetailsLevel>
       <SourceTextLength>674</SourceTextLength>
     </routine>
-    <routine id="4030" parent="15" name="SCHIMBABURSA">
+    <routine id="4031" parent="15" name="SCHIMBABURSA">
       <DetailsLevel>3</DetailsLevel>
       <SourceTextLength>636</SourceTextLength>
     </routine>
-    <sequence id="4031" parent="15" name="CITY_ID_AUTO">
+    <sequence id="4032" parent="15" name="CITY_ID_AUTO">
       <CreatedTimestamp>2022-05-10.00:22:43</CreatedTimestamp>
       <DetailsLevel>2</DetailsLevel>
       <ModifiedTimestamp>2022-05-10.00:22:43</ModifiedTimestamp>
       <ObjectId>26793</ObjectId>
       <SequenceIdentity>1(1)</SequenceIdentity>
     </sequence>
-    <sequence id="4032" parent="15" name="CONTINENT_ID_AUTO">
+    <sequence id="4033" parent="15" name="CONTINENT_ID_AUTO">
       <CreatedTimestamp>2022-05-10.00:22:43</CreatedTimestamp>
       <DetailsLevel>2</DetailsLevel>
       <ModifiedTimestamp>2022-05-10.00:22:43</ModifiedTimestamp>
       <ObjectId>26792</ObjectId>
       <SequenceIdentity>1(1)</SequenceIdentity>
     </sequence>
-    <sequence id="4033" parent="15" name="COUNTRY_ID_AUTO">
+    <sequence id="4034" parent="15" name="COUNTRY_ID_AUTO">
       <CreatedTimestamp>2022-05-10.00:22:43</CreatedTimestamp>
       <DetailsLevel>2</DetailsLevel>
       <ModifiedTimestamp>2022-05-10.00:22:43</ModifiedTimestamp>
       <ObjectId>26791</ObjectId>
       <SequenceIdentity>1(1)</SequenceIdentity>
     </sequence>
-    <table id="4034" parent="15" name="CITIES">
+    <table id="4035" parent="15" name="CITIES">
       <CreatedTimestamp>2022-05-10.00:22:43</CreatedTimestamp>
       <DetailsLevel>3</DetailsLevel>
       <ModifiedTimestamp>2022-05-10.00:22:43</ModifiedTimestamp>
       <ObjectId>26789</ObjectId>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="4035" parent="15" name="CONTINENTS">
+    <table id="4036" parent="15" name="CONTINENTS">
       <CreatedTimestamp>2022-05-10.00:22:43</CreatedTimestamp>
       <DetailsLevel>3</DetailsLevel>
       <ModifiedTimestamp>2022-05-10.00:22:43</ModifiedTimestamp>
       <ObjectId>26787</ObjectId>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="4036" parent="15" name="COUNTRIES">
+    <table id="4037" parent="15" name="COUNTRIES">
       <CreatedTimestamp>2022-05-10.00:22:42</CreatedTimestamp>
       <DetailsLevel>3</DetailsLevel>
       <ModifiedTimestamp>2022-05-10.00:22:42</ModifiedTimestamp>
       <ObjectId>26785</ObjectId>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="4037" parent="15" name="MULTI_TAB">
+    <table id="4038" parent="15" name="MULTI_TAB">
       <CreatedTimestamp>2022-05-09.20:51:40</CreatedTimestamp>
       <DetailsLevel>3</DetailsLevel>
       <ModifiedTimestamp>2022-05-09.20:51:40</ModifiedTimestamp>
       <ObjectId>26784</ObjectId>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="4038" parent="15" name="STUDENTINEW">
+    <table id="4039" parent="15" name="SISTERS">
+      <CreatedTimestamp>2022-05-10.17:08:20</CreatedTimestamp>
+      <DetailsLevel>3</DetailsLevel>
+      <ModifiedTimestamp>2022-05-10.17:08:20</ModifiedTimestamp>
+      <ObjectId>26876</ObjectId>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="4040" parent="15" name="STUDENTINEW">
       <CreatedTimestamp>2022-05-08.16:59:06</CreatedTimestamp>
       <DetailsLevel>3</DetailsLevel>
       <ModifiedTimestamp>2022-05-08.16:59:06</ModifiedTimestamp>
       <ObjectId>26767</ObjectId>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="4039" parent="15" name="TESTARE">
+    <table id="4041" parent="15" name="TESTARE">
       <CreatedTimestamp>2022-05-08.16:59:05</CreatedTimestamp>
       <DetailsLevel>3</DetailsLevel>
       <ModifiedTimestamp>2022-05-08.16:59:05</ModifiedTimestamp>
       <ObjectId>26765</ObjectId>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <body id="4040" parent="4016" name="PESOANA">
+    <body id="4042" parent="4016" name="PESOANA">
       <CreatedTimestamp>2022-04-06.12:51:23</CreatedTimestamp>
       <Errors>21:1:PLS-00103: Encountered the symbol &quot;RETRUN&quot; when expecting one of the following:\n\n   return\n</Errors>
       <Invalid>1</Invalid>
@@ -32134,83 +32150,87 @@
       <ObjectId>25993</ObjectId>
       <SourceTextLength>1316</SourceTextLength>
     </body>
-    <body id="4041" parent="4017" name="INDIVID">
+    <body id="4043" parent="4017" name="INDIVID">
       <SourceTextLength>1615</SourceTextLength>
     </body>
-    <body id="4042" parent="4018" name="PERSOANA">
+    <body id="4044" parent="4018" name="PERSOANA">
       <SourceTextLength>1609</SourceTextLength>
     </body>
-    <argument id="4043" parent="4019" name="IN_ID_STUDENT">
+    <argument id="4045" parent="4019" name="CAMP">
+      <DataType>VARCHAR2|0s</DataType>
+      <Position>1</Position>
+    </argument>
+    <argument id="4046" parent="4020" name="IN_ID_STUDENT">
       <DataType>STUDENTI.ID() %TYPE|0cs</DataType>
       <Position>1</Position>
     </argument>
-    <argument id="4044" parent="4020" name="CAMP">
+    <argument id="4047" parent="4021" name="CAMP">
       <DataType>VARCHAR2|0s</DataType>
       <Position>1</Position>
     </argument>
-    <argument id="4045" parent="4021" name="TB_VECHE">
+    <argument id="4048" parent="4022" name="TB_VECHE">
       <DataType>VARCHAR2|0s</DataType>
       <Position>1</Position>
     </argument>
-    <argument id="4046" parent="4021" name="TB_NAME">
+    <argument id="4049" parent="4022" name="TB_NAME">
       <DataType>VARCHAR2|0s</DataType>
       <Position>2</Position>
     </argument>
-    <argument id="4047" parent="4022" name="V_NUME">
+    <argument id="4050" parent="4023" name="V_NUME">
       <DataType>VARCHAR2|0s</DataType>
       <Position>1</Position>
     </argument>
-    <argument id="4048" parent="4023" name="CREDITE">
+    <argument id="4051" parent="4024" name="CREDITE">
       <DataType>NUMBER|0s</DataType>
       <Position>1</Position>
-    </argument>
-    <argument id="4049" parent="4024">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DataType>VARCHAR2|0s</DataType>
-    </argument>
-    <argument id="4050" parent="4024" name="V_REC_TAB">
-      <DataType>DBMS_SQL.DESC_TAB|0cs</DataType>
-      <Position>1</Position>
-    </argument>
-    <argument id="4051" parent="4024" name="V_NR_COL">
-      <DataType>INT|0s</DataType>
-      <Position>2</Position>
     </argument>
     <argument id="4052" parent="4025">
       <ArgumentDirection>R</ArgumentDirection>
+      <DataType>VARCHAR2|0s</DataType>
+    </argument>
+    <argument id="4053" parent="4025" name="V_REC_TAB">
+      <DataType>DBMS_SQL.DESC_TAB|0cs</DataType>
+      <Position>1</Position>
+    </argument>
+    <argument id="4054" parent="4025" name="V_NR_COL">
+      <DataType>INT|0s</DataType>
+      <Position>2</Position>
+    </argument>
+    <argument id="4055" parent="4026">
+      <ArgumentDirection>R</ArgumentDirection>
       <DataType>NUMBER|0s</DataType>
     </argument>
-    <argument id="4053" parent="4025" name="IN_TABLE">
+    <argument id="4056" parent="4026" name="IN_TABLE">
       <DataType>VARCHAR2|0s</DataType>
       <Position>1</Position>
     </argument>
-    <column id="4054" parent="4034" name="ID">
+    <column id="4057" parent="4035" name="ID">
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="4055" parent="4034" name="COUNTRY">
+    <column id="4058" parent="4035" name="COUNTRY">
       <DataType>VARCHAR2(100 byte)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="4056" parent="4034" name="NAME">
+    <column id="4059" parent="4035" name="NAME">
       <DataType>VARCHAR2(100 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="4057" parent="4034" name="CAPITAL">
+    <column id="4060" parent="4035" name="CAPITAL">
       <DataType>NUMBER(*)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="4058" parent="4034" name="LATITUDE">
+    <column id="4061" parent="4035" name="LATITUDE">
       <DataType>FLOAT(*)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="4059" parent="4034" name="LONGITUDE">
+    <column id="4062" parent="4035" name="LONGITUDE">
       <DataType>FLOAT(*)|0s</DataType>
       <Position>6</Position>
     </column>
-    <index id="4060" parent="4034" name="SYS_C008038">
+    <index id="4063" parent="4035" name="SYS_C008038">
       <ColNames>ID</ColNames>
       <CreatedTimestamp>2022-05-10.00:22:43</CreatedTimestamp>
       <ModifiedTimestamp>2022-05-10.00:22:43</ModifiedTimestamp>
@@ -32219,7 +32239,7 @@
       <TablespaceName>USERS</TablespaceName>
       <Unique>1</Unique>
     </index>
-    <key id="4061" parent="4034" name="SYS_C008038">
+    <key id="4064" parent="4035" name="SYS_C008038">
       <ColNames>ID</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <ModifiedTimestamp>2022-05-10.00:22:43</ModifiedTimestamp>
@@ -32227,17 +32247,17 @@
       <Primary>1</Primary>
       <UnderlyingIndexName>SYS_C008038</UnderlyingIndexName>
     </key>
-    <column id="4062" parent="4035" name="ID">
+    <column id="4065" parent="4036" name="ID">
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="4063" parent="4035" name="NAME">
+    <column id="4066" parent="4036" name="NAME">
       <DataType>VARCHAR2(100 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="4064" parent="4035" name="SYS_C008035">
+    <index id="4067" parent="4036" name="SYS_C008035">
       <ColNames>ID</ColNames>
       <CreatedTimestamp>2022-05-10.00:22:43</CreatedTimestamp>
       <ModifiedTimestamp>2022-05-10.00:22:43</ModifiedTimestamp>
@@ -32246,7 +32266,7 @@
       <TablespaceName>USERS</TablespaceName>
       <Unique>1</Unique>
     </index>
-    <key id="4065" parent="4035" name="SYS_C008035">
+    <key id="4068" parent="4036" name="SYS_C008035">
       <ColNames>ID</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <ModifiedTimestamp>2022-05-10.00:22:43</ModifiedTimestamp>
@@ -32254,25 +32274,25 @@
       <Primary>1</Primary>
       <UnderlyingIndexName>SYS_C008035</UnderlyingIndexName>
     </key>
-    <column id="4066" parent="4036" name="ID">
+    <column id="4069" parent="4037" name="ID">
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="4067" parent="4036" name="NAME">
+    <column id="4070" parent="4037" name="NAME">
       <DataType>VARCHAR2(100 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="4068" parent="4036" name="CODE">
+    <column id="4071" parent="4037" name="CODE">
       <DataType>NUMBER(*)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="4069" parent="4036" name="CONTINENT">
+    <column id="4072" parent="4037" name="CONTINENT">
       <DataType>NUMBER(*)|0s</DataType>
       <Position>4</Position>
     </column>
-    <index id="4070" parent="4036" name="SYS_C008032">
+    <index id="4073" parent="4037" name="SYS_C008032">
       <ColNames>ID</ColNames>
       <CreatedTimestamp>2022-05-10.00:22:43</CreatedTimestamp>
       <ModifiedTimestamp>2022-05-10.00:22:43</ModifiedTimestamp>
@@ -32281,7 +32301,7 @@
       <TablespaceName>USERS</TablespaceName>
       <Unique>1</Unique>
     </index>
-    <key id="4071" parent="4036" name="SYS_C008032">
+    <key id="4074" parent="4037" name="SYS_C008032">
       <ColNames>ID</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <ModifiedTimestamp>2022-05-10.00:22:43</ModifiedTimestamp>
@@ -32289,101 +32309,147 @@
       <Primary>1</Primary>
       <UnderlyingIndexName>SYS_C008032</UnderlyingIndexName>
     </key>
-    <column id="4072" parent="4037" name="NUM">
+    <column id="4075" parent="4038" name="NUM">
       <DataType>NUMBER(*)|0s</DataType>
       <Position>1</Position>
     </column>
-    <column id="4073" parent="4037" name="DAT1">
+    <column id="4076" parent="4038" name="DAT1">
       <DataType>DATE|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="4074" parent="4037" name="VAR">
+    <column id="4077" parent="4038" name="VAR">
       <DataType>VARCHAR2(24 byte)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="4075" parent="4037" name="DAT2">
+    <column id="4078" parent="4038" name="DAT2">
       <DataType>DATE|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="4076" parent="4038" name="ID">
+    <column id="4079" parent="4039" name="ID">
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="4077" parent="4038" name="NR_MATRICOL">
+    <column id="4080" parent="4039" name="ID_CITY1">
+      <DataType>NUMBER(*)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="4081" parent="4039" name="ID_CITY2">
+      <DataType>NUMBER(*)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="4082" parent="4039" name="SYS_C008043">
+      <ColNames>ID_CITY1</ColNames>
+      <ModifiedTimestamp>2022-05-10.17:08:20</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <OnDelete>restrict</OnDelete>
+      <RefKeyName>SYS_C008038</RefKeyName>
+      <RefTableName>CITIES</RefTableName>
+    </foreign-key>
+    <foreign-key id="4083" parent="4039" name="SYS_C008044">
+      <ColNames>ID_CITY2</ColNames>
+      <ModifiedTimestamp>2022-05-10.17:08:20</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <OnDelete>restrict</OnDelete>
+      <RefKeyName>SYS_C008038</RefKeyName>
+      <RefTableName>CITIES</RefTableName>
+    </foreign-key>
+    <index id="4084" parent="4039" name="SYS_C008042">
+      <ColNames>ID</ColNames>
+      <CreatedTimestamp>2022-05-10.17:08:20</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-10.17:08:20</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>26877</ObjectId>
+      <TablespaceName>USERS</TablespaceName>
+      <Unique>1</Unique>
+    </index>
+    <key id="4085" parent="4039" name="SYS_C008042">
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <ModifiedTimestamp>2022-05-10.17:08:20</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>SYS_C008042</UnderlyingIndexName>
+    </key>
+    <column id="4086" parent="4040" name="ID">
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="4087" parent="4040" name="NR_MATRICOL">
       <DataType>VARCHAR2(6 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="4078" parent="4038" name="NUME">
+    <column id="4088" parent="4040" name="NUME">
       <DataType>VARCHAR2(15 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="4079" parent="4038" name="PRENUME">
+    <column id="4089" parent="4040" name="PRENUME">
       <DataType>VARCHAR2(30 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="4080" parent="4038" name="AN">
+    <column id="4090" parent="4040" name="AN">
       <DataType>NUMBER(1 digit)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="4081" parent="4038" name="GRUPA">
+    <column id="4091" parent="4040" name="GRUPA">
       <DataType>CHAR(2 byte)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="4082" parent="4038" name="BURSA">
+    <column id="4092" parent="4040" name="BURSA">
       <DataType>NUMBER(6,2 digit)|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="4083" parent="4038" name="DATA_NASTERE">
+    <column id="4093" parent="4040" name="DATA_NASTERE">
       <DataType>DATE|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="4084" parent="4038" name="EMAIL">
+    <column id="4094" parent="4040" name="EMAIL">
       <DataType>VARCHAR2(40 byte)|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="4085" parent="4038" name="CREATED_AT">
+    <column id="4095" parent="4040" name="CREATED_AT">
       <DataType>DATE|0s</DataType>
       <Position>10</Position>
     </column>
-    <column id="4086" parent="4038" name="UPDATED_AT">
+    <column id="4096" parent="4040" name="UPDATED_AT">
       <DataType>DATE|0s</DataType>
       <Position>11</Position>
     </column>
-    <column id="4087" parent="4039" name="ID">
+    <column id="4097" parent="4041" name="ID">
       <Position>1</Position>
     </column>
-    <column id="4088" parent="4039" name="NR_MATRICOL">
+    <column id="4098" parent="4041" name="NR_MATRICOL">
       <Position>2</Position>
     </column>
-    <column id="4089" parent="4039" name="NUME">
+    <column id="4099" parent="4041" name="NUME">
       <Position>3</Position>
     </column>
-    <column id="4090" parent="4039" name="PRENUME">
+    <column id="4100" parent="4041" name="PRENUME">
       <Position>4</Position>
     </column>
-    <column id="4091" parent="4039" name="AN">
+    <column id="4101" parent="4041" name="AN">
       <Position>5</Position>
     </column>
-    <column id="4092" parent="4039" name="GRUPA">
+    <column id="4102" parent="4041" name="GRUPA">
       <Position>6</Position>
     </column>
-    <column id="4093" parent="4039" name="BURSA">
+    <column id="4103" parent="4041" name="BURSA">
       <Position>7</Position>
     </column>
-    <column id="4094" parent="4039" name="DATA_NASTERE">
+    <column id="4104" parent="4041" name="DATA_NASTERE">
       <Position>8</Position>
     </column>
-    <column id="4095" parent="4039" name="EMAIL">
+    <column id="4105" parent="4041" name="EMAIL">
       <Position>9</Position>
     </column>
-    <column id="4096" parent="4039" name="CREATED_AT">
+    <column id="4106" parent="4041" name="CREATED_AT">
       <Position>10</Position>
     </column>
-    <column id="4097" parent="4039" name="UPDATED_AT">
+    <column id="4107" parent="4041" name="UPDATED_AT">
       <Position>11</Position>
     </column>
   </database-model>

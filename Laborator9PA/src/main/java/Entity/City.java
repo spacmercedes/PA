@@ -2,7 +2,9 @@ package Entity;
 
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "CITIES")
@@ -10,6 +12,9 @@ import java.util.List;
         @NamedQuery(name="findCityByName", query ="select a from City a where a.name=:name"),
 })
 public class City {
+//    @ManyToMany(cascade = CascadeType.ALL)
+//    private List<City> surori;
+
     @Id
     @SequenceGenerator(name = "sequence",allocationSize=1,
             sequenceName = "city_id_auto")
@@ -31,9 +36,15 @@ public class City {
 
     @Column(name = "LONGITUDE")
     private Double longitude;
-//
-//    @ManyToOne(targetEntity = Country.class)
-//    private String country1;
+
+    @ManyToMany(cascade={CascadeType.ALL})
+    @JoinTable(name="Sisters",
+            joinColumns={@JoinColumn(name="ID_CITY1")},
+            inverseJoinColumns={@JoinColumn(name="ID_CITY2")})
+    private Set<City> sisters = new HashSet<City>();
+
+    @ManyToMany(mappedBy="sisters")
+    private Set<City> sister = new HashSet<City>();
 
     public City(String name){
         this.name=name;

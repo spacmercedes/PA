@@ -29,6 +29,15 @@ longitude float,
 primary key (id)
 );
 /
+create table sisters(
+    id int not null,
+    id_city1 int,
+    id_city2 int,
+    primary key (id),
+    foreign key (id_city1) references cities(id),
+    foreign key (id_city2) references cities(id)
+);
+/
 create sequence country_id_auto minvalue 1 start with 1 increment by 1;
 /
 create sequence continent_id_auto minvalue 1 start with 1 increment by 1;

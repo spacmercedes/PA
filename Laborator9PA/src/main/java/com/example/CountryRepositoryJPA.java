@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import java.util.List;
 
-public class CountryRepositoryJPA implements AbstractRepository<Country> {
+public class CountryRepositoryJPA extends AbstractRepository<Country> {
     private EntityManagerFactory entityManagerFactory = PersistenceUtil.getInstance().returnEntity();
 
     public CountryRepositoryJPA() {

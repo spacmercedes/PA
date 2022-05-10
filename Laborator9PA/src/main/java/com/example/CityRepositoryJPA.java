@@ -7,7 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import java.util.List;
 
-public class CityRepositoryJPA implements AbstractRepository<City>  {
+public class CityRepositoryJPA extends AbstractRepository<City>  {
     private EntityManagerFactory entityManagerFactory = PersistenceUtil.getInstance().returnEntity();
     private static Faker faker = new Faker();
 

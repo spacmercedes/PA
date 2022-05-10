@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import java.util.List;
 
-public class ContinentRepositoryJPA implements AbstractRepository<Continent> {
+public class ContinentRepositoryJPA extends AbstractRepository<Continent> {
     private EntityManagerFactory entityManagerFactory = PersistenceUtil.getInstance().returnEntity();
 
     public ContinentRepositoryJPA() {

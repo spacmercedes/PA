@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99f884da-ff3a-4966-b29c-db5cd9d12fb8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6915090f-7931-4094-8088-3376655e763b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6915090f-7931-4094-8088-3376655e763b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6915090f-7931-4094-8088-3376655e763b/storage_v2/_src_/schema/STUDENT.Gw7Kug.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6915090f-7931-4094-8088-3376655e763b/storage_v2/_src_/schema/STUDENT.Gw7Kug.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab8.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lab8.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entity/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ChocoSolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/Continent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/Continent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AbstractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AbstractRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CityRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CityRepositoryJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ContinentRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ContinentRepositoryJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CountryRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CountryRepositoryJPA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Entity/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entity/City.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entity/Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entity/Country.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ChocoSolver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CityRepositoryJPA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CityRepositoryJPA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +109,7 @@
       <workItem from="1652003092247" duration="18239000" />
       <workItem from="1652120053749" duration="51000" />
       <workItem from="1652120133816" duration="49000" />
-      <workItem from="1652120275093" duration="2612000" />
+      <workItem from="1652120275093" duration="11038000" />
     </task>
     <servers />
   </component>
