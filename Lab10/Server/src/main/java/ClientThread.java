@@ -187,11 +187,13 @@ class ClientThread extends Thread {
                     File imgFile = new File("src/main/java/graph.png");
                     ImageIO.write(image, "PNG", imgFile);
 
+                    out.println(g);
+                    out.flush();
+
                     Report report = new Report(server.clientList, imgFile.getPath());
                     report.call();
 
-                    out.println(g);
-                    out.flush();
+
                 }
                 else if ((logged==true) && request.equals("upload")) {
                     STFTPClient stftpClient = new STFTPClient();
