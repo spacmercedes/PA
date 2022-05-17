@@ -13,11 +13,6 @@ public class Server {
     static private boolean shouldShutDown = false;
     static public volatile int threadCount = 0;
     private static ServerSocket serverSocket = null;
-//
-//    static public void stopServer() { //opreste brusc
-//        System.out.println("Server was stopped by a client");
-//        System.exit(0);
-//    }
 
     static public void stopServerGracefully() {
         System.out.println("Server initiated by a client gracefully");
@@ -51,10 +46,6 @@ public class Server {
         System.out.println("Number of threads: " + threadCount);
     }
 
-//    public void setRunning(boolean running) {
-//        this.running = running;
-//    }
-
     public int findClient(String name)
     {
         for(int i=0; i<clientList.size(); i++)
@@ -62,14 +53,6 @@ public class Server {
                 return i;
         return -1;
     }
-
-//    public boolean findLoginClient(String name)
-//    {
-//        for(Client c:clientLoginList)
-//            if(c.getName().equals(name))
-//                return true;
-//        return false;
-//    }
 
     public void register(String name){
         clientList.add(new Client(name));

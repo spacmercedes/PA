@@ -1,44 +1,47 @@
 <html>
 <head>
     <title>
-        Social Network Graph Representation
+       Representation
     </title>
+
+
+    <style>
+        img{
+            width:100px;
+            height:500px;
+        }
+
+        body{
+            padding:25px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            background: lightslategrey;
+        }
+
+        .list
+        {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    </style>
+
+
 </head>
 <body>
-
-<div class="list">
-    <h3>Users registered in the network:</h3>
-    <#list userList as String>
-        <div>
-            - Username: ${String}
-        </div>
-    </#list>
+<div>
+    <img src=${image}/>
 </div>
 <br>
 
-<style>
-    img{
-        width:500px;
-        height:500px;
-    }
-
-    body{
-        padding:25px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-
-    .list
-    {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-</style>
-
-<div>
-    <img src=${imgFilePath}/>
+<div class="list">
+    <h3>Utilizatori:</h3>
+    <#list clienti as clienti>
+        <ol>
+            User: ${clienti.name}
+        </ol>
+    </#list>
 </div>
 
 
