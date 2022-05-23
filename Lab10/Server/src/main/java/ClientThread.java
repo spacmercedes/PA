@@ -189,8 +189,8 @@ class ClientThread extends Thread {
                 else if (request.length()>0 && request.equals("upload")) {
                     STFTPClient stftpClient = new STFTPClient();
                     stftpClient.connect();
-                    stftpClient.upload("C:/Users/spacm/Documents/GitHub/PA/Lab10/Server/representation.html", "/");
-                    stftpClient.download("/", "C:/Users/spacm/Documents/GitHub/PA/Lab10/Server/representation2.html");
+//                    stftpClient.upload("server-path", "/");
+//                    stftpClient.download("/", "server-path");
                     stftpClient.disconnect();
                     raspuns = "File uploaded";
                     out.println(raspuns);
@@ -209,9 +209,9 @@ class ClientThread extends Thread {
         } catch (JSchException e) {
             e.printStackTrace();
         }
-        catch (SftpException e) {
-            e.printStackTrace();
-        }
+//        catch (SftpException e) {
+//            e.printStackTrace();
+//        }
         catch (TemplateException e) {
             e.printStackTrace();
         } finally {
