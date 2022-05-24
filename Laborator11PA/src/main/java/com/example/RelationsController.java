@@ -51,17 +51,7 @@ public class RelationsController {
             return ResponseEntity.notFound().build();
         return ResponseEntity.ok(foundRelations);
     }
-
-    @GetMapping("/{username1}/{username2}")
-    public ResponseEntity<Relations> getRelationship(@PathVariable String username1, @PathVariable String username2)
-    {
-        Relations relationshipOp = relationshipRepo.getRelationship(username1,username2);
-
-        if(relationshipOp==null)
-            return ResponseEntity.notFound().build();
-
-        return ResponseEntity.ok(relationshipOp);
-    }
+    
 
     @GetMapping("/mostPopularUsers/{k}")
     public ResponseEntity<List<String>> getMostPopularUsers(@PathVariable Integer k)
