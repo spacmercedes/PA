@@ -2,7 +2,7 @@ package com.example;
 
 //Base Source: https://howtodoinjava.com/swagger2/swagger-spring-mvc-rest-example/
 
-//Command: http://localhost:8080/v2/api-docs
+//Command: http://localhost:8070/v2/api-docs
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -10,11 +10,10 @@ import org.apache.http.impl.client.DefaultHttpClient;
 public class Main {
     public static void main(String[] args) throws ClientProtocolException, IOException {
         HttpClient client = new DefaultHttpClient();
-        HttpGet request = new HttpGet("http://localhost:8090/persons" +
-                "   ");
+        HttpGet request = new HttpGet("http://localhost:8070/persons");
         HttpResponse response = client.execute(request);
         BufferedReader rd = new BufferedReader (new InputStreamReader(response.getEntity().getContent()));
-        String line = " ";
+        String line = "";
         while ((line = rd.readLine()) != null) {
             System.out.println(line);
         }

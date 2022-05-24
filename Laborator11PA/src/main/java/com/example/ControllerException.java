@@ -13,11 +13,11 @@ public class ControllerException {
 
     @ExceptionHandler(value = {ResourceNotFound.class})
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
-    public ErrorMessage resourceNotFoundException(ResourceNotFound ex, WebRequest request) {
+    public ErrorMessage resourceNotFoundException(ResourceNotFound exeption, WebRequest request) {
         ErrorMessage message = new ErrorMessage(
                 404,
                 new Date(System.currentTimeMillis()),
-                ex.getMessage(),
+                exeption.getMessage(),
                 "Testing this request");
 
         return message;

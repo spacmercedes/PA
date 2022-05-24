@@ -28,7 +28,7 @@ public class RelationsController {
     private PersonController personController = new PersonController();
 
     @PostMapping("/")
-    public ResponseEntity<String> createrelationship(@RequestBody Relations relationship)
+    public ResponseEntity<String> createRelationship(@RequestBody Relations relationship)
     {
         if(relationshipRepo.isPresent(relationship))
             return ResponseEntity.badRequest().build();
@@ -40,7 +40,6 @@ public class RelationsController {
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{user1}/{user2}").buildAndExpand(relationship.getPerson1(), relationship.getPerson2()).toUri();
 
-        //return ResponseEntity.created(uri).body(relationship);
         return new ResponseEntity<>("Realation created successfully", HttpStatus.CREATED);
     }
 
