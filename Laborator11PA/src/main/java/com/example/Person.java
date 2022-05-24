@@ -12,9 +12,10 @@ public class Person {
         this.id = id;
         this.name = name;
     }
-    public Person(){
 
+    public Person() {
     }
+
     public int getId() {
         return id;
     }
@@ -26,8 +27,5 @@ public class Person {
     public void setName(String name) {
         this.name = name;
     }
-    
-    public void setId(int id) {
-        this.id = id;
-    }
+
 }

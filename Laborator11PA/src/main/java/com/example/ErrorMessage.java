@@ -1,6 +1,6 @@
 package com.example;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class ErrorMessage {
     private int statusCode;
