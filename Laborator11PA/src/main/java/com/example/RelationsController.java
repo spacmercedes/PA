@@ -51,7 +51,7 @@ public class RelationsController {
             return ResponseEntity.notFound().build();
         return ResponseEntity.ok(foundRelations);
     }
-    
+
 
     @GetMapping("/mostPopularUsers/{k}")
     public ResponseEntity<List<String>> getMostPopularUsers(@PathVariable Integer k)
