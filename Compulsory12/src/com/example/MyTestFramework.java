@@ -107,6 +107,10 @@ public class MyTestFramework {
             System.out.println(clasa);
         }
 
+
+//------------------------------------------------------------Bonus--------------------------------------------------------------------------------------------
+
+
         //JCOMPILER SI TESTE NON-STATICE
         JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
         MyDiagnosticListener listener = new MyDiagnosticListener();

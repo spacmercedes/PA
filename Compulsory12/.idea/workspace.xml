@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fce7cdbc-e8aa-49cc-8e34-f70cc33b32ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Compulsory12.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyProgram.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Compulsory12/com/example/MyClassLoader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Compulsory12/com/example/MyTestFramework.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Compulsory12/com/example/Test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyProgram.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyProgram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/MyClassLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/MyTestFramework.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laborator12PA.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Compulsory/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Compulsory/MyClassloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Compulsory/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Compulsory/newpackage/ClassDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compulsory12/com/example/MyTestFramework$MyDiagnosticListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compulsory12/com/example/MyTestFramework$MyDiagnosticListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compulsory12/com/example/MyTestFramework.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compulsory12/com/example/MyTestFramework.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/MyTestFramework.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/MyTestFramework.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653941488404</updated>
-      <workItem from="1653941488962" duration="8087000" />
+      <workItem from="1653941488962" duration="10851000" />
     </task>
     <servers />
   </component>
