@@ -51,7 +51,7 @@ public class ProductServiceImpl implements ProductService{
                 .summaryStatistics();
     }
 
-    @Override
+    @Override //salvez in Repository o entitate mapata de la DTO
     public void addNewProduct(ProductDTO productDTO) {
         productRepo.save(mapper.map(productDTO, ProductEntity.class));
     }
@@ -66,12 +66,12 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public void applyDiscount(String category, Double discount) {
+    public void applyDiscount(String category, Double discount) { //discout la o categorie
         var productList = productRepo.findAll();
         var updatedProductList = productList.stream()
-                .filter(product -> product.getCategory().equalsIgnoreCase(category))
-                .map(product -> product.withPrice(product.getPrice() * (1 - discount/100)))
-                .collect(Collectors.toList());
-        productRepo.saveAll(updatedProductList);
+                .filter(product -> product.getCategory().equalsIgnoreCase(category)) //filtru care face sa am produse de aceeasi categorie
+                .map(product -> product.withPrice(product.getPrice() * (1 - discount/100))) //adauga discount-ul
+                .collect(Collectors.toList()); //colecetz intr-o lista totul
+        productRepo.saveAll(updatedProductList); //salvez din repo toata lista
     }
 }

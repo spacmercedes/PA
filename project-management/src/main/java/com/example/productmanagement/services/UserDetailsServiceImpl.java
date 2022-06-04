@@ -24,9 +24,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        var userEntityOptional = userRepo.findUserByEmail(email);
+        var userEntityOptional = userRepo.findUserByEmail(email); //cauta in baza de date dupa email
 
-        if (userEntityOptional.isEmpty()) {
+        if (userEntityOptional.isEmpty()) { //exceptie daca nu se gaseste in baza de date email-ul
             log.error("User not found in database");
             throw new UsernameNotFoundException("User not found in database.");
         }

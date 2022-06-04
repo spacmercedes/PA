@@ -19,13 +19,13 @@ public class UserController {
     private final BCryptPasswordEncoder passwordEncoder;
 
     @Autowired
-    public UserController(UserService userService, BCryptPasswordEncoder passwordEncoder) {
+    public UserController(UserService userService, BCryptPasswordEncoder passwordEncoder) { //login nu tine de user controller ci de spring security
         this.userService = userService;
         this.passwordEncoder = passwordEncoder;
     }
 
     @PostMapping
-    ResponseEntity<?> createUser(@RequestBody UserDTO userDTO) {
+    ResponseEntity<?> createUser(@RequestBody UserDTO userDTO) { //creaza un user nou
         userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
         userService.createUser(userDTO);
         return ResponseEntity.status(HttpStatus.CREATED).build();

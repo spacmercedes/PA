@@ -2,7 +2,7 @@ package com.example.productmanagement.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
+//creaza un JSON din obiecte
 public class JSONUtil {
     /**
      * Converts an object to a JSON String

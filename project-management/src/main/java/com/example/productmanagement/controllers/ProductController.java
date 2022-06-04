@@ -24,5 +24,5 @@ public class ProductController {
     public ResponseEntity<?> getAllProductsByCategory(@PathVariable String category) {
         return ResponseEntity.ok(productService.getAllProductsByCategory(category));
     }
-
+ //update,discount - producController.java in servicii
 }

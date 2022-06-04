@@ -25,9 +25,10 @@ public class AuthEntryPoint implements AuthenticationEntryPoint {
      */
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException {
-        log.error("Unauthorized error: {}", authException.getMessage());
-        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+        log.error("Unauthorized error: {}", authException.getMessage()); //daca ceva nu merge cu procesul de autorizare
+        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);//se pune status de UNAUTHORIZED
         response.setContentType(APPLICATION_JSON_VALUE);
+        //se pune mesajul de eroare si continutul de tip JSON
         new ObjectMapper().writeValue(response.getOutputStream(), JSONUtil.objectToJsonString("Unauthorized error: Bad credentials"));
     }
 }

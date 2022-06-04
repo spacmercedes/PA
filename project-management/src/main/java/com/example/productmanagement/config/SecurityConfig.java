@@ -18,7 +18,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-
+//securitatea aplicatiei consta in faptul ca un request trece prin mai multe filtre, ca sa fie autorizat
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -39,28 +39,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http.cors().and().csrf().disable().exceptionHandling().authenticationEntryPoint(new AuthEntryPoint());
-
-
+        http.cors().and().csrf().disable().exceptionHandling().authenticationEntryPoint(new AuthEntryPoint()); //cors si csrf sunt layere de securitate prin care nu se permite aplicatiiilor sa faca requesturi doar de la backend //cors - nu poti da requestrui din pagina de HTML. Faci un request catre serverul de front-end si dupa frontul face request la backend
+        //le dau disable acestor layere, deoarece nu permit transferul de resurse foarte usor
         http.authorizeRequests().antMatchers("/users").permitAll();
         http.authorizeRequests().antMatchers("/login").permitAll();
         http.authorizeRequests().antMatchers("/swagger-ui/*", "/swagger-ui.html", "/webjars/**", "/v2/**", "/swagger-resources/**").permitAll();
 
         http.authorizeRequests().anyRequest().authenticated()
                 .and()
-                .addFilter(new AuthenticationFilter(authenticationManager()))
-                .addFilterBefore(authorizationFilter, UsernamePasswordAuthenticationFilter.class)
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .addFilter(new AuthenticationFilter(authenticationManager()))  //se verifica autenticitatea token-ului
+                .addFilterBefore(authorizationFilter, UsernamePasswordAuthenticationFilter.class) //primul filtru prin care trece, se face login-ul cu  UsernamePasswordAuthenticationFilter.class (clasa din spring)
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS); //se asigura ca un client, indifereent de cate servere sunt, primeste acelasi raspuns pentru acelasi request
     }
 
     @Bean
-    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+    public BCryptPasswordEncoder bCryptPasswordEncoder() { //implementarea PasswordEncoder care foloseste functia hash BCrypt
         return new BCryptPasswordEncoder();
     }
 
     @Override
-    @Bean(name = BeanIds.AUTHENTICATION_MANAGER)
-    public AuthenticationManager authenticationManagerBean() throws Exception {
+    @Bean(name = BeanIds.AUTHENTICATION_MANAGER) //id default pentru autetificare
+    public AuthenticationManager authenticationManagerBean() throws Exception { //proceseaza un request de Autentificare
         return super.authenticationManagerBean();
     }
 

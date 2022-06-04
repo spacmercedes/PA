@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
 
+
 @RestController
 @RequestMapping("/orders")
 public class OrderController {
@@ -24,8 +25,8 @@ public class OrderController {
     }
 
     @GetMapping("/statistics")
-    public ResponseEntity<?> getStatistics(@RequestParam(required = false) String status,
-                                           @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate date) {
+    public ResponseEntity<?> getStatistics(@RequestParam(required = false) String status, //pot sa apelez end-point-ul /statistics, si pot sa ii dau sau nu un parametru //daca am status, fa dupa status
+                                           @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate date) { //daca am date - fa dupa date  //DateFormat - formatez data, pentru ca localDate avea minute
         if (status != null)
             return ResponseEntity.ok(orderService.getStatisticsByStatus(status));
         if (date != null)

@@ -14,6 +14,9 @@ import springfox.documentation.spring.web.plugins.Docket;
  */
 @Configuration
 public class BeanConfig {
+    /*Il injectez in mai multe servicii (CustomerServiceImpl). Il creez o singura data la pornirea aplicatiei si doar
+    il injectez(includ) in clase.
+     */
     @Bean
     public ModelMapper modelMapper() {
         return new ModelMapper();
@@ -22,9 +25,10 @@ public class BeanConfig {
 
     @Bean
     public Docket api(){
-        return new Docket(DocumentationType.SWAGGER_2).select()
-                .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.any())
+        return new Docket(DocumentationType.SWAGGER_2)//setez SWAGGER_2
+                .select()// select() returneaza o instanta a ApiSelectorBuilder, care ofera o cale de a controla endpoint-urile expuse de Swagger.
+                .apis(RequestHandlerSelectors.any()) //Putem configura predicate pentru selectarea RequestHandlers
+                .paths(PathSelectors.any()) // folosind any() pentru ambele vom face documentatia pentru tot API-ul disponibila prin Swagger.
                 .build();
     }
 }

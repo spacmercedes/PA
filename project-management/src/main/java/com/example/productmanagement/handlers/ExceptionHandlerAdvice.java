@@ -20,8 +20,8 @@ public class ExceptionHandlerAdvice extends ResponseEntityExceptionHandler {
         Map<String, Object> result = new LinkedHashMap<>();
         result.put("Timestamp", LocalDateTime.now());
         result.put("Message", userAlreadyExistsException.getMessage());
-        return new ResponseEntity<>(JSONUtil.objectToJsonString(result), HttpStatus.NOT_ACCEPTABLE);
-    }
+        return new ResponseEntity<>(JSONUtil.objectToJsonString(result), HttpStatus.NOT_ACCEPTABLE); //daca primeste exceptia UserAlreadyExists
+    } //creeaza un JSON si trimite statusul de NOT_ACCEPTABLE, facand handle la exceptie mai elegant fara parsa o exceptie de la o metoda la alta
 
     @ExceptionHandler(IllegalDeleteException.class)
     public ResponseEntity<Object> illegalDelete(IllegalDeleteException illegalDeleteException) {

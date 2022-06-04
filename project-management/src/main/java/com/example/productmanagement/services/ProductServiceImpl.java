@@ -32,24 +32,24 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public List<ProductDTO> getAllProductsByCategory(String category) {
-        var products = productRepo.findAll()
+        var products = productRepo.findAll()//din toata lsita de entitati am pus-o intr-un stream de date
                 .stream()
-                .filter(product -> product.getCategory().equalsIgnoreCase(category))
-                .toList();
+                .filter(product -> product.getCategory().equalsIgnoreCase(category)) // am aplicat un filter: pentru fiecare produs , vezi ca categoria lui sa fie egala cu cea data de parametru
+                .toList(); //apoi pun stream-ul intr-o lista
 
         List<ProductDTO> resultList = new LinkedList<>();
-        products.forEach(entity -> resultList.add(mapper.map(entity, ProductDTO.class)));
+        products.forEach(entity -> resultList.add(mapper.map(entity, ProductDTO.class))); //mapare la DTO
         return resultList;
     }
 
     @Override
     public StatisticsDTO getStatistics() {
         DoubleSummaryStatistics statistics = productRepo.findAll()
-                .stream()
-                .mapToDouble(ProductEntity::getPrice)
+                .stream()           //productEntity :: getPrice -  se refera la meoda getPrice din clasa ProductEntity
+                .mapToDouble(ProductEntity::getPrice)//mapToDouble returneaza un stream de double-uri , in functie de o annumita metoda din clasele din care fac parte elementele stream-ului
                 .summaryStatistics();
 
-        return StatisticsDTO.builder()
+        return StatisticsDTO.builder() //fac statistici pe min , max , average
                 .sum(statistics.getSum())
                 .average(statistics.getAverage())
                 .count(statistics.getCount())

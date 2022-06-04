@@ -20,8 +20,8 @@ import java.util.Date;
 public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
     private final AuthenticationManager authenticationManager;
-    public static final String SECRET = "SECRET_KEY";
-    public static final long EXPIRATION_TIME = 2 * 60 * 60 * 1000; // 2h
+    public static final String SECRET = "SECRET_KEY"; //secretul cu care este semnat token-ul
+    public static final long EXPIRATION_TIME = 2 * 60 * 60 * 1000; // dura de valabilitate a token-ului - 2h
 
     @Autowired
     public AuthenticationFilter(AuthenticationManager authenticationManager) {
@@ -35,12 +35,12 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
      * @param response - the input {@link HttpServletResponse}
      * @return an Authentication
      */
-    @Override
+    @Override //se ocupa clasele din spring
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         String username = this.obtainUsername(request);
         String password = this.obtainPassword(request);
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(username, password);
-        return authenticationManager.authenticate(authenticationToken);
+        return authenticationManager.authenticate(authenticationToken); //returneaza un token
     }
 
     /**
@@ -53,12 +53,12 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
      */
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication auth) {
-        String token = JWT.create()
-                .withSubject(((User) auth.getPrincipal()).getUsername())
-                .withExpiresAt(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
-                .sign(Algorithm.HMAC512(SECRET.getBytes()));
-        token = "Bearer " + token;
-
+        String token = JWT.create() //daca autentificarea se face cu succes, se creaaza un token
+                .withSubject(((User) auth.getPrincipal()).getUsername()) //cu subiectul user
+                .withExpiresAt(new Date(System.currentTimeMillis() + EXPIRATION_TIME)) // timpul de exprare ( data curenta + timpul de expirare )
+                .sign(Algorithm.HMAC512(SECRET.getBytes())); //semneaza cu algoritmul HMA512(SHA512) si cu secretul pe care l am definit
+        token = "Bearer " + token; //avem un token de tip Bearer, de aceea avem nevoie de acest prefix
+          //request-urile si response-urile HTTP au mai multe headere, predefinite
         response.addHeader("Authorization", token);
         response.setHeader("Authorization", token);
         response.setHeader("Access-Control-Allow-Origin", "*");
