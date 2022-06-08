@@ -51,7 +51,7 @@ public class controller {
             }
         }
 
-        DateFormatSymbols symbols=new DateFormatSymbols(givenLocale); /* Aici cumva ultimul simbol a mereu null deci trebuie eliminat ultimu element*/
+        DateFormatSymbols symbols=new DateFormatSymbols(givenLocale); // Aici ultimul simbol e mereu null deci trebuie eliminat ultimu element
         System.out.printf(MessageFormat.format(props.getProperty("months"),givenLocale.getDisplayCountry()));
         String[] monthNames=symbols.getMonths();
         monthNames=Arrays.copyOf(monthNames,monthNames.length-1);
