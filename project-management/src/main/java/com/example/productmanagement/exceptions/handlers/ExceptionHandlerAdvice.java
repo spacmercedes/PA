@@ -1,4 +1,4 @@
-package com.example.productmanagement.handlers;
+package com.example.productmanagement.exceptions.handlers;
 
 import com.example.productmanagement.exceptions.IllegalDeleteException;
 import com.example.productmanagement.exceptions.UserAlreadyExistsException;

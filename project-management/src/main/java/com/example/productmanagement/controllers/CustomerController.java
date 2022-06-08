@@ -14,7 +14,7 @@ public class CustomerController {
     @Autowired //injectam serviciul, deoarece este best prcatice sa facem logica cu microservicii, nu in controlere
     CustomerService customerService;
 
-    @PostMapping //adaugam un nou customer (POST - adaugam o noua resursa in baza de date)
+    @PostMapping //adaugam un nou customer
     public ResponseEntity<?> addNewCustomer(@RequestBody CustomerDTO customerDTO) { //cer ca si parametru un DTO, pentru a respecta principiile SOLID si a nu lucra cu entitati  //@RequestBody - cere un JSON in body
         customerService.addNewCustomer(customerDTO);
         return ResponseEntity.status(HttpStatus.CREATED).build(); //returneaza un cod status (http comunica cu coduri de status) in acest caz CREATED, daca resursa a fost creata cu succes
